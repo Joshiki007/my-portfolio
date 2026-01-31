@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Joshi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <div id="progress-bar"></div>
+
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Aditya Joshi</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" id="resume-btn">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero parallax">
+    <div class="hero-content">
+      <img src="images/profile.jpg" alt="Aditya Joshi" class="hero-img">
+      <div class="hero-text">
+        <h2>Hello, I'm Aditya</h2>
+        <p>Computer Engineering Student | AR & Blockchain Enthusiast</p>
+        <a href="#" class="btn" id="contact-btn">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>I am a 4th-year Computer Engineering student from Nepal with interests in emerging technologies such as Augmented Reality, decentralized systems, and modern web development. I enjoy creating projects that solve real-world problems and experimenting with new technologies.</p>
+  </section>
+
+  <section id="skills" class="section fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill" data-skill="HTML" data-level="90">HTML</div>
+      <div class="skill" data-skill="CSS" data-level="85">CSS</div>
+      <div class="skill" data-skill="JavaScript" data-level="80">JavaScript</div>
+      <div class="skill" data-skill="AR" data-level="70">Augmented Reality</div>
+      <div class="skill" data-skill="Blockchain" data-level="75">Blockchain</div>
+    </div>
+  </section>
+
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-card-front">
+            <img src="images/project1.jpg" alt="Project 1" class="project-img">
+            <h3>Decentralized Inventory Management</h3>
+            <p>A blockchain-based system to manage inventory securely and transparently.</p>
+          </div>
+          <div class="project-card-back">
+            <h3>Project Details</h3>
+            <p>More info or links</p>
+            <a href="#">View Project</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-card-front">
+            <img src="images/project2.jpg" alt="Project 2" class="project-img">
+            <h3>AR Learning Concept</h3>
+            <p>Conceptual AR project for educational visualization.</p>
+          </div>
+          <div class="project-card-back">
+            <h3>Project Details</h3>
+            <p>More info or links</p>
+            <a href="#">View Project</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="section fade-in">
+    <h2>Contact</h2>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/aditya-joshi-bb487936a/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a href="https://github.com/Joshiki007" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-2x"></i></a>
+      <a href="https://www.instagram.com/joshiki07/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://www.facebook.com/aditya.joshi.667148" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fa-2x"></i></a>
+    </div>
+  </section>
+
+  <div id="resume-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="resume-paper">
+        <h2>Aditya Joshi</h2>
+        <h3>Computer Engineering Student</h3>
+        <p>Email: adityajoshi200210@gmail.com | Phone: +977-9818273442 | Nepal</p>
+        
+        <a href="resume/Aditya_Joshi_Resume.pdf" download="Aditya_Joshi_Resume.pdf" class="btn">
+          <i class="fas fa-download"></i> Download Full Resume (PDF)
+        </a>
+
+        <section style="margin-top:20px;">
+          <h4>Education</h4>
+          <p>- Secondary Education Examination (SEE), DAVSKVB, Jawalakhel, Lalitpur (2019)</p>
+          <p>- +2, Prasadi Academy, Kumaripati, Lalitpur (2020-2021)</p>
+          <p>- BE in Computer Engineering, Advanced College of Engineering and Management, Kalanki, Kathmandu (2022-present)</p>
+        </section>
+
+        <section style="margin-top:20px;">
+          <h4>Skills</h4>
+          <p>HTML, C, C++, AR, Blockchain, Unity, Blender, 3D Modeling</p>
+        </section>
+
+        <section style="margin-top:20px;">
+          <h4>Projects</h4>
+          <ul>
+            <li>Decentralized Inventory Management using Blockchain</li>
+            <li>AR Learning Concept Project</li>
+          </ul>
+        </section>
+
+        <section style="margin-top:20px;">
+          <h4>Interests</h4>
+          <p>Augmented Reality, Web & Mobile Apps, Data Science, Emerging Tech</p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact-modal" class="modal">
+    <div class="contact-modal-box">
+      <span class="contact-close">&times;</span>
+      <h2>Contact Me</h2>
+      <p>Feel free to drop a message</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Aditya Joshi. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

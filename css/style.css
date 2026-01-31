@@ -1,0 +1,91 @@
+/* Custom Cursor Styles */
+* { cursor: none !important; } /* Hide default cursor */
+
+.cursor-dot, .cursor-outline {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  transition: transform 0.1s ease-out, opacity 0.3s ease-in-out;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #6a11cb;
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #2575fc;
+}
+
+/* Reset and Layout */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #fff; background-color: #0b0b0b; }
+
+#progress-bar {
+  position: fixed; top: 0; left: 0; height: 5px;
+  background: linear-gradient(90deg,#6a11cb,#2575fc);
+  width: 0%; z-index: 999; transition: width 0.25s;
+}
+
+header { background-color: #111; position: sticky; top: 0; z-index: 100; }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+.nav-links { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.nav-links a { color: #fff; text-decoration: none; transition: color 0.3s; }
+.nav-links a:hover { color: #6a11cb; }
+
+.hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; }
+.hero-content { display: flex; gap: 3rem; align-items: center; padding: 2rem; background: rgba(0,0,0,0.6); border-radius: 15px; }
+.hero-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #6a11cb; animation: float 5s infinite ease-in-out; }
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+.section { padding: 5rem 10%; opacity: 0; transform: translateY(50px); transition: 0.8s; }
+.section.visible { opacity: 1; transform: translateY(0); }
+
+/* Skills Percentage Labels */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; }
+.skill { background-color: #1a1a1a; padding: 2.5rem 1rem; text-align: center; border-radius: 10px; font-weight: bold; position: relative; overflow: hidden; }
+.skill-bar { position: absolute; bottom: 0; left: 0; height: 5px; background: linear-gradient(90deg, #6a11cb, #2575fc); width: 0%; transition: width 0.5s ease; }
+.skill-count { display: block; margin-top: 10px; color: #6a11cb; font-size: 1.2rem; opacity: 0; transition: opacity 0.3s; }
+.skill:hover .skill-count { opacity: 1; }
+
+/* Project Cards & Image Fitting */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; perspective: 1000px; }
+.project-card { width: 100%; height: 350px; perspective: 1000px; }
+.project-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.8s; transform-style: preserve-3d; }
+.project-card:hover .project-card-inner { transform: rotateY(180deg); }
+.project-card-front, .project-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 10px; padding: 1.5rem; background-color: #1a1a1a; display: flex; flex-direction: column; align-items: center; }
+.project-card-back { background: linear-gradient(135deg,#6a11cb,#2575fc); transform: rotateY(180deg); justify-content: center; text-align: center; }
+
+.project-img { 
+  width: 100%; 
+  height: 160px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  margin-bottom: 10px; 
+}
+
+/* Modals */
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(3px); z-index: 1000; }
+.modal-content { position: relative; background: #fff8e0; margin: 5vh auto; padding: 2.5rem; width: 90%; max-width: 700px; height: 85vh; overflow-y: auto; border-radius: 10px; color: #333; }
+.contact-modal-box { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #1b1b1b; padding: 2rem; border-radius: 15px; width: 90%; max-width: 420px; color: #fff; text-align: center; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 8px 0; background: #000; border: 1px solid #333; color: #fff; border-radius: 8px; }
+
+.btn { 
+  display: inline-block; padding: 0.8rem 1.5rem; background: linear-gradient(90deg,#6a11cb,#2575fc); 
+  border-radius: 25px; color: #fff; text-decoration: none; border: none; cursor: none; transition: 0.3s; margin-top: 10px; 
+}
+
+.social-links { display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem; }
+.social-links a { color: #fff; transition: 0.3s; }
+.social-links a:hover { color: #6a11cb; transform: scale(1.2); }
+
+footer { text-align: center; padding: 2rem; background: #111; margin-top: 3rem; }
